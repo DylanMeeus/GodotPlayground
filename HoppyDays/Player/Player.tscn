@@ -15,7 +15,7 @@ height = 94.0
 
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 461, 282 )
-collision_mask = 2
+collision_mask = 14
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -43,9 +43,6 @@ motion_mirroring = Vector2( 2048, 2048 )
 margin_right = 40.0
 margin_bottom = 40.0
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
 motion_scale = Vector2( 0.5, 1 )
