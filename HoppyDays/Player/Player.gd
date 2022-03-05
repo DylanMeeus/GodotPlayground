@@ -57,7 +57,7 @@ func hurt():
 	motion.y = -JUMP_SPEED
 
 func boost():
-	print("boost")
+
 	position.y -= 1
 	motion.y -= 1
 	yield(get_tree(), "idle_frame")
