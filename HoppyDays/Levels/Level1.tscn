@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Levels/Tileset.tres" type="TileSet" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Items/JumpPad.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/GameState.gd" type="Script" id=6]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Items/Coin.tscn" type="PackedScene" id=8]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 6 )
@@ -18,12 +19,12 @@ position = Vector2( 491, 117 )
 tile_set = ExtResource( 2 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( 65590, 6, 0, 131105, 6, 0, 196674, 6, 0, 262151, 0, 0, 327754, 6, 0, 393260, 6, 0, 458810, 6, 0, 524313, 6, 0, 655361, 0, 0, 655367, 0, 0, 655373, 0, 0, 655379, 0, 0, 720938, 6, 0, 786496, 6, 0, 786497, 6, 0, 786510, 6, 0 )
+tile_data = PoolIntArray( 65590, 6, 0, 131105, 6, 0, 196674, 6, 0, 262151, 0, 0, 262237, 1, 0, 327754, 6, 0, 393260, 6, 0, 458810, 6, 0, 524313, 6, 0, 589921, 4, 0, 655361, 0, 0, 655367, 0, 0, 655373, 0, 0, 655379, 0, 0, 655460, 4, 0, 720938, 6, 0, 720999, 4, 0, 786510, 6, 0, 983073, 4, 0, 1048628, 2, 0, 1048629, 2, 0, 1048630, 2, 0, 1048631, 2, 0, 1048632, 2, 0, 1048633, 2, 0, 1048634, 2, 0, 1048638, 2, 0, 1048639, 2, 0, 1048640, 2, 0, 1048641, 2, 0, 1048642, 2, 0, 1048643, 2, 0, 1048644, 2, 0, 1048645, 2, 0, 1048646, 2, 0, 1048647, 2, 0, 1048648, 2, 0, 1048649, 2, 0, 1048650, 2, 0, 1048651, 2, 0, 1048652, 2, 0, 1048653, 2, 0, 1048654, 2, 0, 1048655, 2, 0, 1048656, 2, 0, 1048657, 2, 0, 1048658, 2, 0, 1048659, 2, 0, 1048663, 2, 0, 1048664, 2, 0 )
 
 [node name="JumpPads" type="Node" parent="."]
 
 [node name="JumpPad" parent="JumpPads" instance=ExtResource( 5 )]
-position = Vector2( 766, 235 )
+position = Vector2( 5759, 980 )
 
 [node name="JumpPad2" parent="JumpPads" instance=ExtResource( 5 )]
 position = Vector2( 1668, 474 )
@@ -39,8 +40,40 @@ position = Vector2( 1827, 480 )
 [node name="SpikeTop3" parent="Hazards" instance=ExtResource( 3 )]
 position = Vector2( 625, 611 )
 
+[node name="SpikeTop4" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 4783, 979 )
+
+[node name="SpikeTop5" parent="Hazards" instance=ExtResource( 3 )]
+position = Vector2( 5933, 986 )
+
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
 
 [node name="GUI" parent="." instance=ExtResource( 7 )]
+
+[node name="Coins" type="Node" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 1349, 540 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 4779, 827 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 6063, 198 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 3109, 319 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 3446, 921 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 3522, -4 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 191, 562 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 8 )]
+position = Vector2( 2877, 320 )

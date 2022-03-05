@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GFX/Hazards/838-8387221_great-ball-minecraft-pixel-art.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 191.262
+
+[node name="Ball" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 0.25, 0.25 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
